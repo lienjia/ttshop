@@ -3,7 +3,8 @@
 <mapper namespace="com.lej.ttshop.dao.TbItemCustomMapper" >
 
   <sql id="Base_Column_List" >
-    id, title, sell_point as sellpoint, price, num, barcode, image, cid, status, created, updated
+    i.id, i.title, i.sell_point as sellpoint, i.price, i.num, i.barcode,
+    i.image, i.cid, i.status, i.created, i.updated, c.name as catName
   </sql>
   <select id="countItems" resultType="long">
     select
@@ -12,11 +13,13 @@
     order by id
   </select>
 
-  <select id="listItemsByPage" parameterType="com.lej.common.dto.Page" resultType="com.lej.ttshop.pojo.po.TbItem">
+  <select id="listItemsByPage" parameterType="com.lej.common.dto.Page" resultType="com.lej.ttshop.pojo.vo.TbItemCustom">
     select
     <include refid="Base_Column_List" />
-    from tb_item
-    order by id
+    from tb_item i
+    left join tb_item_cat c
+    on i.cid = c.id
+    order by i.id
     limit #{offset},#{rows}
   </select>
 </mapper>

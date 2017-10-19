@@ -3,6 +3,7 @@ package com.lej.ttshop.service;
 import com.lej.common.dto.Page;
 import com.lej.common.dto.Result;
 import com.lej.ttshop.pojo.po.TbItem;
+import com.lej.ttshop.pojo.vo.TbItemCustom;
 
 import java.util.List;
 
@@ -14,5 +15,5 @@ import java.util.List;
  */
 public interface ItemService {
     List<TbItem> listItems();
-    Result<TbItem> listItems(Page page);
+    Result<TbItemCustom> listItems(Page page);
 }

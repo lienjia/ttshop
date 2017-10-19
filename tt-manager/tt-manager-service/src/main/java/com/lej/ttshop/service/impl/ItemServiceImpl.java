@@ -5,6 +5,7 @@ import com.lej.common.dto.Result;
 import com.lej.ttshop.dao.TbItemCustomMapper;
 import com.lej.ttshop.dao.TbItemMapper;
 import com.lej.ttshop.pojo.po.TbItem;
+import com.lej.ttshop.pojo.vo.TbItemCustom;
 import com.lej.ttshop.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,10 +30,10 @@ public class ItemServiceImpl implements ItemService{
     }
 
     @Override
-    public Result<TbItem> listItems(Page page) {
+    public Result<TbItemCustom> listItems(Page page) {
         long total = itemCustomMapper.countItems();
-        List<TbItem> rows = itemCustomMapper.listItemsByPage(page);
-        Result<TbItem> rs = new Result<>();
+        List<TbItemCustom> rows = itemCustomMapper.listItemsByPage(page);
+        Result<TbItemCustom> rs = new Result<>();
         rs.setRows(rows);
         rs.setTotal(total);
         return rs;

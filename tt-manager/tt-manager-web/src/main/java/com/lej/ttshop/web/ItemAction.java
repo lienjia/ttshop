@@ -3,6 +3,7 @@ package com.lej.ttshop.web;
 import com.lej.common.dto.Page;
 import com.lej.common.dto.Result;
 import com.lej.ttshop.pojo.po.TbItem;
+import com.lej.ttshop.pojo.vo.TbItemCustom;
 import com.lej.ttshop.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -28,7 +29,7 @@ public class ItemAction {
 //    }
     @ResponseBody
     @RequestMapping("/items")
-    public Result<TbItem> listItems(Page page){
+    public Result<TbItemCustom> listItems(Page page){
         return itemService.listItems(page);
 }
 }
