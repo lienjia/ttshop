@@ -16,4 +16,6 @@ import java.util.List;
 public interface ItemService {
     List<TbItem> listItems();
     Result<TbItemCustom> listItems(Page page);
+
+    int updateItemByIds(List<Long> ids);
 }
