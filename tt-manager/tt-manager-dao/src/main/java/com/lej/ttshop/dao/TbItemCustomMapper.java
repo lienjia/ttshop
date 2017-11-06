@@ -1,11 +1,11 @@
 package com.lej.ttshop.dao;
 
-import com.lej.common.dto.Page;
 import com.lej.ttshop.pojo.vo.TbItemCustom;
 
 import java.util.List;
+import java.util.Map;
 
 public interface TbItemCustomMapper {
-    long countItems();
-    List<TbItemCustom> listItemsByPage(Page page);
+    long countItems(Map<String,Object> map);
+    List<TbItemCustom> listItemsByPage(Map<String,Object> map);
 }

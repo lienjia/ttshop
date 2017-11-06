@@ -12,6 +12,7 @@
         <module name="tt-manager-pojo" />
         <module name="tt-manager-service" />
         <module name="tt-manager-web" />
+        <module name="tt-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="tt-mbgenerator" target="1.7" />
       <module name="tt-parent" target="1.7" />
       <module name="tt-parent (1) (com.dhc)" target="1.7" />
+      <module name="tt-upload" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
